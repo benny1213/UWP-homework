@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "英语学习系统", "英语学习系统\英语学习系统.csproj", "{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|ARM.ActiveCfg = Debug|ARM
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|ARM.Build.0 = Debug|ARM
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|ARM.Deploy.0 = Debug|ARM
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|ARM64.Build.0 = Debug|ARM64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|x64.ActiveCfg = Debug|x64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|x64.Build.0 = Debug|x64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|x64.Deploy.0 = Debug|x64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|x86.ActiveCfg = Debug|x86
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|x86.Build.0 = Debug|x86
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Debug|x86.Deploy.0 = Debug|x86
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|ARM.ActiveCfg = Release|ARM
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|ARM.Build.0 = Release|ARM
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|ARM.Deploy.0 = Release|ARM
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|ARM64.ActiveCfg = Release|ARM64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|ARM64.Build.0 = Release|ARM64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|ARM64.Deploy.0 = Release|ARM64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|x64.ActiveCfg = Release|x64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|x64.Build.0 = Release|x64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|x64.Deploy.0 = Release|x64
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|x86.ActiveCfg = Release|x86
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|x86.Build.0 = Release|x86
+		{764F1120-02C8-45D1-B11B-C8E2C74FB4BE}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {622F703E-E404-440A-9FC6-E1403E4A7A8A}
+	EndGlobalSection
+EndGlobal
