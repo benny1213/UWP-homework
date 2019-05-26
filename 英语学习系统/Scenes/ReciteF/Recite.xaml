@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="英语学习系统.Scenes.Recite"
+    x:Class="英语学习系统.Scenes.ReciteF.Recite"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:英语学习系统.Scenes"
+    xmlns:local="using:英语学习系统.Scenes.ReciteF"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -16,13 +16,15 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <TextBlock x:Name="word" Width="auto" Height="auto" FontSize="38" Margin="0, 20, 0, 10" TextAlignment="Center" Text="word"/>
-            <TextBlock x:Name="phonogram" Width="200" Height="auto" FontSize="18" Margin="0, 2, 0, 10" TextAlignment="Center" Text="phonogram"/>
-            <TextBlock x:Name="sentence" Width="auto" Height="auto" FontSize="18" Margin="0, 20, 0, 10" TextAlignment="Center" Text="sentence sentence sentence"/>
-
+            <TextBlock x:Name="phonetic" Width="200" Height="auto" FontSize="18" Margin="0, 2, 0, 10" TextAlignment="Center" Text="phonogram"/>
+            <TextBlock x:Name="definition" Width="auto" Height="auto" FontSize="18" Margin="0, 20, 0, 10" TextAlignment="Center" Text="sentence sentence sentence" Visibility="Collapsed" />
+            <TextBlock x:Name="translation" Width="auto" Height="auto" FontSize="18" Margin="0, 20, 0, 10" TextAlignment="Center" Text="sentence sentence sentence" Visibility="Collapsed" />
+            
             <Button x:Name="doKnow" Margin="0, 2, 0, 0" HorizontalAlignment="Center" Content="认识" Width="700" Click="doKnow_Click"/>
             <Button x:Name="doNotKnow" Margin="0, 20, 0, 0" HorizontalAlignment="Center" Content="不认识" Width="700" Click="DoNotKnow_Click"/>
+            <Button x:Name="showdetail" Margin="0, 20, 0, 0" HorizontalAlignment="Center" Content="查看详情" Width="700" Click="Showdetail_Click"  Visibility="Collapsed"/>
 
-            <Button x:Name="connect_database" Margin="0, 20, 0, 0" HorizontalAlignment="Center" Content="连接数据库" Width="200" Click="Connect_database_Click"/>
+            <Button x:Name="tooeasy" Margin="0, 20, 0, 0" HorizontalAlignment="Center" Content="太简单" Width="200" Click="Tooeasy_Click"/>
         </StackPanel>
 
 

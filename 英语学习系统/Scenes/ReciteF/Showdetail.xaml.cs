@@ -1,4 +1,5 @@
-﻿using System;
+﻿//todo:接下来就是显示出单词在这个页面了 睡觉
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,11 +21,18 @@ namespace 英语学习系统.Scenes.ReciteF
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class doKnow : Page
+    public sealed partial class Showdetail : Page
     {
-        public doKnow()
+        word word;
+        public Showdetail()
         {
             this.InitializeComponent();
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (e.Parameter.GetType().Equals(typeof(word)))
+                word = (word)e.Parameter;
         }
     }
 }

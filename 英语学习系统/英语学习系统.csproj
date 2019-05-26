@@ -129,14 +129,14 @@
     <Compile Include="Scenes\BBCnews.xaml.cs">
       <DependentUpon>BBCnews.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenes\Recite.xaml.cs">
+    <Compile Include="Scenes\ReciteF\Recite.xaml.cs">
       <DependentUpon>Recite.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenes\ReciteF\doKnow.xaml.cs">
-      <DependentUpon>doKnow.xaml</DependentUpon>
+    <Compile Include="Scenes\ReciteF\Recite_StarPage.xaml.cs">
+      <DependentUpon>Recite_StarPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenes\ReciteF\doNotKnow.xaml.cs">
-      <DependentUpon>doNotKnow.xaml</DependentUpon>
+    <Compile Include="Scenes\ReciteF\Showdetail.xaml.cs">
+      <DependentUpon>Showdetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenes\Translate.xaml.cs">
       <DependentUpon>Translate.xaml</DependentUpon>
@@ -172,15 +172,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Scenes\Recite.xaml">
+    <Page Include="Scenes\ReciteF\Recite.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Scenes\ReciteF\doKnow.xaml">
+    <Page Include="Scenes\ReciteF\Recite_StarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Scenes\ReciteF\doNotKnow.xaml">
+    <Page Include="Scenes\ReciteF\Showdetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
