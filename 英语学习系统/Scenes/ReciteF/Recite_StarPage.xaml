@@ -5,13 +5,13 @@
     xmlns:local="using:英语学习系统.Scenes.ReciteF"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:英语学习系统.Scenes"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="449,319,0,0" FontSize="48" Text="开始背单词！" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="159,500,0,0" FontSize="40" Text="今日单词：100   |   新词： 0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="159,500,0,0" FontSize="40" Text="今日单词：100   |   新词： 100" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button Content="开始学习" HorizontalAlignment="Left" Margin="783,500,0,0" VerticalAlignment="Top" Height="59" Width="237" Click="Button_Click"  />
-
     </Grid>
 </Page>

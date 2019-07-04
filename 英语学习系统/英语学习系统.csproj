@@ -120,6 +120,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DBControl.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -129,14 +130,17 @@
     <Compile Include="Scenes\BBCnews.xaml.cs">
       <DependentUpon>BBCnews.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenes\ReciteF\EndRecite.xaml.cs">
+      <DependentUpon>EndRecite.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenes\ReciteF\Recite.xaml.cs">
       <DependentUpon>Recite.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenes\ReciteF\Recite_StarPage.xaml.cs">
       <DependentUpon>Recite_StarPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenes\ReciteF\Showdetail.xaml.cs">
-      <DependentUpon>Showdetail.xaml</DependentUpon>
+    <Compile Include="Scenes\ReciteF\ShowWord.xaml.cs">
+      <DependentUpon>ShowWord.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenes\Translate.xaml.cs">
       <DependentUpon>Translate.xaml</DependentUpon>
@@ -172,6 +176,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenes\ReciteF\EndRecite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenes\ReciteF\Recite.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -180,7 +188,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Scenes\ReciteF\Showdetail.xaml">
+    <Page Include="Scenes\ReciteF\ShowWord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

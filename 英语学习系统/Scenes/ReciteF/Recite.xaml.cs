@@ -9,6 +9,7 @@
 using MySql.Data.MySqlClient;//使用MySQL连接
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -34,7 +35,7 @@ namespace 英语学习系统.Scenes.ReciteF
     /// </summary>
     public sealed partial class Recite : Page
     {
-        int count = 0;
+        int count;
         word[] words;
         int f_rate;
 
@@ -42,15 +43,14 @@ namespace 英语学习系统.Scenes.ReciteF
         public Recite()
         {
             this.InitializeComponent();
-            this.Loaded += Recite_Loaded;
-        }
-
-        private void Recite_Loaded(object sender, RoutedEventArgs e)
-        {
+            NavigationCacheMode = NavigationCacheMode.Enabled;
 
         }
+
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+
 
             base.OnNavigatedTo(e);
             if (e.Parameter.GetType().Equals(typeof(word[])))
@@ -63,18 +63,23 @@ namespace 英语学习系统.Scenes.ReciteF
         
         private void doKnow_Click(object sender, RoutedEventArgs e)
         {
+            words[count].Color = "Blue";
             f_rate++;
             count++;
             changeword();
+            Frame.Navigate(typeof(Scenes.ReciteF.ShowWord), words[count - 1]);
+            definition.Visibility = Visibility.Collapsed;
         }
 
         private void DoNotKnow_Click(object sender, RoutedEventArgs e)
         {
+            words[count].Color = "Red";
             f_rate--;
             //第一次按下则显示definition，第二次按下显示translation且将按钮变成“查看详情”按钮
 
             if(definition.Visibility == Visibility.Collapsed)//第一次点击显示definition
             {
+                tooeasy.Visibility = Visibility.Collapsed;
                 definition.Visibility = Visibility.Visible;
                 return;
             }
@@ -84,22 +89,41 @@ namespace 英语学习系统.Scenes.ReciteF
                 doKnow.Visibility = Visibility.Collapsed;
                 doNotKnow.Visibility = Visibility.Collapsed;
                 showdetail.Visibility = Visibility.Visible;
+                count++;
+                return;
             }
-
         }
         private void Tooeasy_Click(object sender, RoutedEventArgs e)
         {
+            words[count].Color = "Blue";
+            showdetail.Visibility = Visibility.Collapsed;
+            doKnow.Visibility = Visibility.Visible;
+            doNotKnow.Visibility = Visibility.Visible;
+            definition.Visibility = Visibility.Collapsed;
+            translation.Visibility = Visibility.Collapsed;
             words[count].Sf_rate = 2;
             count++;
             changeword();
         }
         private void Showdetail_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Scenes.ReciteF.Showdetail), words[count]);
+            Frame.Navigate(typeof(Scenes.ReciteF.ShowWord), words[count-1]);
+            showdetail.Visibility = Visibility.Collapsed;
+            doKnow.Visibility = Visibility.Visible;
+            doNotKnow.Visibility = Visibility.Visible;
+            definition.Visibility = Visibility.Collapsed;
+            translation.Visibility = Visibility.Collapsed;
+            tooeasy.Visibility = Visibility.Visible;
         }
 
         private void changeword()//考虑到实用性和复杂度，这里的更变单词函数只提供向前更变的选项拒绝用户向前查看单词
         {
+            if (count == 20)
+            {
+                Frame.Navigate(typeof(Scenes.ReciteF.EndRecite), words);
+                count = 0;
+                return;
+            }
             word.Text = words[count].Sword;
             phonetic.Text = words[count].Sphonetic;
             definition.Text = words[count].Sdefinition == "" ? "暂无英文释义" : words[count].Sdefinition;

@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="英语学习系统.Scenes.ReciteF.Showdetail"
+    x:Class="英语学习系统.Scenes.ReciteF.ShowWord"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:英语学习系统.Scenes.ReciteF"
@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+
     </Grid>
 </Page>

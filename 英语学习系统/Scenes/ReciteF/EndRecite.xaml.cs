@@ -1,6 +1,6 @@
-﻿//todo:接下来就是显示出单词在这个页面了 睡觉
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -21,18 +21,33 @@ namespace 英语学习系统.Scenes.ReciteF
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Showdetail : Page
+    public sealed partial class EndRecite : Page
     {
-        word word;
-        public Showdetail()
+        word[] words;
+        public EndRecite()
         {
             this.InitializeComponent();
         }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            if (e.Parameter.GetType().Equals(typeof(word)))
-                word = (word)e.Parameter;
+            if (e.Parameter.GetType().Equals(typeof(word[])))
+            {
+                words = (word[])e.Parameter;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DBControl dB = new DBControl();
+            foreach(word x in words)
+            {
+                dB.write("INSERT INTO `recite` (`userID`, `wordID`, `fRate`) VALUES ('"+1+"', '"+x.Sid+"', '"+x.Sf_rate+"')");//userID 要改成全局变量
+            }
+
+            words = dB.read("frq != 0  order by rand() limit 20", 20);
+            Frame.Navigate(typeof(Scenes.ReciteF.Recite), words);
         }
     }
 }

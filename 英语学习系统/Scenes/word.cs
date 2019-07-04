@@ -22,6 +22,7 @@ namespace 英语学习系统.Scenes//此类暂存从数据库中取出的单词�
         int sfrq;
         string sexchange;
         int sf_rate;
+        string temp;
 
         public int Sid { get => sid; set => sid = value; }
         public string Sword { get => sword; set => sword = value; }
@@ -36,5 +37,6 @@ namespace 英语学习系统.Scenes//此类暂存从数据库中取出的单词�
         public int Sfrq { get => sfrq; set => sfrq = value; }
         public string Sexchange { get => sexchange; set => sexchange = value; }
         public int Sf_rate { get => sf_rate; set => sf_rate = value; }
+        public string Color { get => temp; set => temp = value; }
     }
 }
