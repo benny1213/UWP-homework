@@ -11,9 +11,11 @@ namespace 英语学习系统
         string stitle;
         string sname;
         string scatager;
+        int sid;
 
         public string Stitle { get => stitle; set => stitle = value; }
         public string Sname { get => sname; set => sname = value; }
         public string Scatager { get => scatager; set => scatager = value; }
+        public int Sid { get => sid; set => sid = value; }
     }
 }

@@ -41,6 +41,33 @@ namespace 英语学习系统
 
         }
 
+        public Video[] readvideo()
+        {
+            MySqlConnection = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=root");
+            MySqlConnection.Open();
+            MySqlCommand = new MySqlCommand("select * from test.video;", MySqlConnection);
+            mySqlDataAdapter = new MySqlDataAdapter(MySqlCommand);
+            DataSet dataSet = new DataSet();
+            mySqlDataAdapter.Fill(dataSet, "video");
+
+            DataTable = dataSet.Tables["video"];
+            Video[] videos = new Video[DataTable.Rows.Count];
+
+            DataRowCollection = DataTable.Rows;
+            for (int i = 0; i < DataRowCollection.Count; i++)//将数据库中读取到的数据放入数组当中
+            {
+                videos[i] = new Video();
+                DataRow = DataRowCollection[i];
+                videos[i].Sid = Convert.ToInt32(DataRow[0]);
+                videos[i].Sname = DataRow[1].ToString();
+                videos[i].Stitle = DataRow[2].ToString();
+                videos[i].Scatager = DataRow[3].ToString();
+            }
+
+            MySqlConnection.Close();
+            return videos;
+        }
+
         public Scenes.User[] readuser()
         {
             

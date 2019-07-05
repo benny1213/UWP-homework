@@ -28,12 +28,15 @@ namespace 英语学习系统.Scenes
     {
         public ShowVideo()
         {
-            this.InitializeComponent();
             this.Loaded += ShowVideo_Loaded;
+            this.InitializeComponent();
         }
+        Video[] videos = new Video[3];
 
         private async void ShowVideo_Loaded(object sender, RoutedEventArgs e)
         {
+            DBControl dBControl = new DBControl();
+            videos = dBControl.readvideo();
             StorageFolder folder = await(Windows.Storage.KnownFolders.VideosLibrary).GetFolderAsync("uwpVideo");
             try
             {

@@ -133,6 +133,9 @@
     <Compile Include="Scenes\BBCnews.xaml.cs">
       <DependentUpon>BBCnews.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenes\Calculator.xaml.cs">
+      <DependentUpon>Calculator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenes\ReciteF\EndRecite.xaml.cs">
       <DependentUpon>EndRecite.xaml</DependentUpon>
     </Compile>
@@ -162,6 +165,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="readme.md" />
     <None Include="英语学习系统_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +193,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Scenes\BBCnews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\Calculator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

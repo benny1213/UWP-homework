@@ -32,7 +32,9 @@ namespace 英语学习系统
                 new MenuItem() { Icon=Symbol.Tag, Text="背单词", label = typeof(Scenes.ReciteF.Recite_StarPage)},
                 new MenuItem() { Icon=Symbol.PreviewLink, Text="BBC新闻", label = typeof(Scenes.BBCnews)},
                 new MenuItem() { Icon=Symbol.CalendarDay, Text="每日一句", label = typeof(Scenes.ReciteF.Recite)},//暂时挂在recite中
-                new MenuItem() { Icon=Symbol.Video, Text="视频", label = typeof(Scenes.ShowVideo)}
+                new MenuItem() { Icon=Symbol.Video, Text="视频", label = typeof(Scenes.ShowVideo)},
+                new MenuItem() { Icon=Symbol.Calculator, Text="计算器", label = typeof(Scenes.Calculator)},
+                new MenuItem() { Icon=Symbol.Manage, Text="用户管理", label = typeof(Scenes.UserManage)}
 
 
 
