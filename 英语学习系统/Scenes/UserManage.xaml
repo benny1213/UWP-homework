@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="英语学习系统.Scenes.UserManage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:英语学习系统.Scenes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="AntiqueWhite">
+            <ScrollViewer VerticalScrollMode="Enabled" Padding="20">
+                <StackPanel x:Name="spusers"/>
+            </ScrollViewer>
+        </Grid>
+        <Border Padding="20" CornerRadius="16" BorderBrush="Black" BorderThickness="1,1,1,1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <StackPanel Orientation="Vertical">
+                    <Image Source="../img/"/>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="用户id：" Margin="0,6.5,0,6.5" HorizontalAlignment="Right"/>
+                            <TextBlock Text="用户登录名：" Margin="0,16.5,0,6.5" HorizontalAlignment="Right"/>
+                            <TextBlock Text="密码：" Margin="0,16.5,0,6.5" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <TextBox Width="300"/>
+                            <TextBox Width="300" Margin="0,10,0,0"/>
+                            <TextBox Width="300" Margin="0,10,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="0,20,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button Content="保存" Click="btn_save"/>
+                        <Button Content="新建" Click="btn_change" Margin="10,0,0,0"/>
+                        
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

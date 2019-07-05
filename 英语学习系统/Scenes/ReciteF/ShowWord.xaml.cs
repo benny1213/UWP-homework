@@ -23,7 +23,7 @@ namespace 英语学习系统.Scenes.ReciteF
     public sealed partial class ShowWord : Page
     {
         word word;
-        public ShowWord()
+        public ShowWord()//先运行初始化函数然后才会运行OnNavigateTo()
         {
             this.InitializeComponent();
             
@@ -35,10 +35,10 @@ namespace 英语学习系统.Scenes.ReciteF
                 word = (word)e.Parameter;
             if (word.Sf_rate < 0)
             {
-                for (int i = word.Sf_rate; i <= 0; i++)
+                for (int i = word.Sf_rate; i < 0; i++)
                 {
-                    SymbolIcon star = new SymbolIcon() { Symbol = Symbol.OutlineStar, Foreground = new SolidColorBrush(Windows.UI.Colors.Red) };
-                    //starStackPanel.Children.Add(star);
+                    SymbolIcon star = new SymbolIcon() { Symbol = Symbol.OutlineStar, Foreground = new SolidColorBrush(Windows.UI.Colors.Red), HorizontalAlignment = HorizontalAlignment.Center };
+                    starStackPanel.Children.Add(star);
                 }
             }
             else
@@ -47,8 +47,8 @@ namespace 英语学习系统.Scenes.ReciteF
                     return;
                 for (int i = 0; i < word.Sf_rate; i++)
                 {
-                    SymbolIcon star = new SymbolIcon() { Symbol = Symbol.SolidStar, Foreground = new SolidColorBrush(Windows.UI.Colors.Blue) };
-                    //starStackPanel.Children.Add(star);
+                    SymbolIcon star = new SymbolIcon() { Symbol = Symbol.SolidStar, Foreground = new SolidColorBrush(Windows.UI.Colors.Blue), HorizontalAlignment = HorizontalAlignment.Center };
+                    starStackPanel.Children.Add(star);
                 }
             }
         }
@@ -65,5 +65,6 @@ namespace 英语学习系统.Scenes.ReciteF
         {
             Frame.GoBack();
         }
+        
     }
 }

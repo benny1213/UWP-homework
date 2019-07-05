@@ -64,7 +64,7 @@ namespace 英语学习系统.Scenes.ReciteF
         private void doKnow_Click(object sender, RoutedEventArgs e)
         {
             words[count].Color = "Blue";
-            f_rate++;
+            words[count].Sf_rate++;
             count++;
             changeword();
             Frame.Navigate(typeof(Scenes.ReciteF.ShowWord), words[count - 1]);
@@ -74,10 +74,10 @@ namespace 英语学习系统.Scenes.ReciteF
         private void DoNotKnow_Click(object sender, RoutedEventArgs e)
         {
             words[count].Color = "Red";
-            f_rate--;
+            words[count].Sf_rate--;
             //第一次按下则显示definition，第二次按下显示translation且将按钮变成“查看详情”按钮
 
-            if(definition.Visibility == Visibility.Collapsed)//第一次点击显示definition
+            if (definition.Visibility == Visibility.Collapsed)//第一次点击显示definition
             {
                 tooeasy.Visibility = Visibility.Collapsed;
                 definition.Visibility = Visibility.Visible;

@@ -43,7 +43,8 @@ namespace 英语学习系统.Scenes.ReciteF
             DBControl dB = new DBControl();
             foreach(word x in words)
             {
-                dB.write("INSERT INTO `recite` (`userID`, `wordID`, `fRate`) VALUES ('"+1+"', '"+x.Sid+"', '"+x.Sf_rate+"')");//userID 要改成全局变量
+                英语学习系统.App.userid = 1;
+                dB.write("INSERT INTO `recite` (`userID`, `wordID`, `fRate`) VALUES ('" + 英语学习系统.App.userid +"', '"+x.Sid+"', '"+x.Sf_rate+"')");//todo:userID 要改成全局变量
             }
 
             words = dB.read("frq != 0  order by rand() limit 20", 20);

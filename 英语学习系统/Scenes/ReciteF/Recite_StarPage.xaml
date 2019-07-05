@@ -10,8 +10,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="449,319,0,0" FontSize="48" Text="开始背单词！" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="159,500,0,0" FontSize="40" Text="今日单词：100   |   新词： 100" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="开始学习" HorizontalAlignment="Left" Margin="783,500,0,0" VerticalAlignment="Top" Height="59" Width="237" Click="Button_Click"  />
-    </Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" FontSize="48" Text="开始背单词！" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <StackPanel Orientation="Horizontal" Margin="0,100,0,0">
+                <TextBlock HorizontalAlignment="Center" FontSize="40" Text="今日单词：100   |   新词： 20" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <Button Content="开始学习" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Height="59" Width="237" Click="Button_Click"  />
+            </StackPanel>
+        </StackPanel>
+         </Grid>
 </Page>

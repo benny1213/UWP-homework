@@ -19,6 +19,26 @@ namespace 英语学习系统
         MySqlDataAdapter mySqlDataAdapter;
         Scenes.word[] words;
 
+        public int login(string username, string password)
+        {
+            MySqlConnection = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=root;database=test");
+            MySqlConnection.Open();
+            MySqlCommand = new MySqlCommand("select * from user where username = '"+username+"';" , MySqlConnection);
+            MySqlDataReader reader = MySqlCommand.ExecuteReader();
+            
+            while (reader.Read())
+            {
+                if(password == reader["userPassword"].ToString())
+                {
+                    int id = Convert.ToInt32(reader["id"]);
+                    MySqlConnection.Close();
+                    return id;
+                }
+            }
+            MySqlConnection.Close();
+            return -1;
+
+        }
 
         public Scenes.word[] read(String condition, int amount)
         {

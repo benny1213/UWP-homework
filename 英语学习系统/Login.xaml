@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="英语学习系统.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:英语学习系统"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Img/LoginBG.jpg" />
+        </Grid.Background>
+        
+        <Popup x:Name="poplogin" IsOpen="False" Width="300" HorizontalAlignment="Right">
+            <Popup.ChildTransitions>
+                <TransitionCollection>
+                    <EdgeUIThemeTransition Edge="Right"/>
+                </TransitionCollection>
+            </Popup.ChildTransitions>
+            <Grid Background="White" Width="350" Height="800">
+                <StackPanel Width="300" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <TextBlock Text="用户名：" VerticalAlignment="Center" Width="50"/>
+                        <TextBox x:Name="tbusername" Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="    密码：" VerticalAlignment="Center" Width="50"/>
+                        <PasswordBox x:Name="pbpassword" Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Width="300">
+                        <Button Click="login" Content="登陆" Margin="75,0,0,0"/>
+                        <Button Click="rege" Content="注册" Margin="20, 0, 0, 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Popup>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="欢迎来到英语学习系统！" HorizontalAlignment="Center" FontSize="40" IsColorFontEnabled="True" Foreground="White" />
+            <Button Click="pop_Click"  Width="200" Content="登陆" Margin="0, 100, 0, 0" HorizontalAlignment="Center" Background="White" FocusVisualPrimaryBrush="White" Foreground="Black" FocusVisualSecondaryBrush="#99FFFFFF"/>
+        </StackPanel>
+    </Grid>
+</Page>

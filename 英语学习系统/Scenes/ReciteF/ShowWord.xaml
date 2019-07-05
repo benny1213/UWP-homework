@@ -9,6 +9,23 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock x:Name="did" Text="{x:Bind local:ShowWord.GetString2('单词id：',word.Sid)}"/>
+        <TextBlock Margin="0,20,0,0" Text="{x:Bind local:ShowWord.GetString2('f_rate = ', word.Sf_rate)}"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="tbword" Text="{x:Bind word.Sword}" FontSize="40" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="tbphonetic" Text="{x:Bind local:ShowWord.GetString('发音：', word.Sphonetic)}" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="tbtranslation" Text="{x:Bind local:ShowWord.GetString('释义：', word.Stranslation)}" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="tbpos" Text="{x:Bind local:ShowWord.GetString('词语位置：', word.Spos)}" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="tbcollins" Text="{x:Bind local:ShowWord.GetString2('柯林斯星级：',word.Scollins)}" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="tboxford" Text="{x:Bind local:ShowWord.GetString2('牛津三千核心词汇：',word.Soxford)}" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="tbbnc" Text="{x:Bind local:ShowWord.GetString2('英国国家语料库词频顺序：',word.Sbnc)}" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="tbtag" Text="{x:Bind local:ShowWord.GetString('标签：',word.Stag)}" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="tbexchange" Text="{x:Bind local:ShowWord.GetString('词性变化：',word.Sexchange)}" HorizontalAlignment="Left"/>
 
+            <StackPanel x:Name="starStackPanel" Orientation="Horizontal">
+                <TextBlock Text="熟悉程度：" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <Button Click="Button_Click" Content="继续" HorizontalAlignment="Center" Width="200" Margin="0,40,0,0"/>
+        </StackPanel>
     </Grid>
 </Page>
