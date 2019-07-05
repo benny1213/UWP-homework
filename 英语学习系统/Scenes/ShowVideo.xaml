@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="英语学习系统.Scenes.ShowVideo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:英语学习系统.Scenes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid  Background="WhiteSmoke">
+            <StackPanel x:Name="spvideo" Orientation="Vertical" Margin="20,0,0,0" >
+            </StackPanel>
+        </Grid>
+        <MediaElement Grid.Column="1" x:Name="meVoideo" AreTransportControlsEnabled="True" AutoPlay="False"/>
+    </Grid>
+</Page>

@@ -18,6 +18,7 @@ namespace 英语学习系统
         DataRowCollection DataRowCollection;
         MySqlDataAdapter mySqlDataAdapter;
         Scenes.word[] words;
+        Scenes.User[] users;
 
         public int login(string username, string password)
         {
@@ -40,6 +41,35 @@ namespace 英语学习系统
 
         }
 
+        public Scenes.User[] readuser()
+        {
+            
+            MySqlConnection = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=root");
+            MySqlConnection.Open();
+            MySqlCommand = new MySqlCommand("select * from test.user;", MySqlConnection);
+            mySqlDataAdapter = new MySqlDataAdapter(MySqlCommand);
+            DataSet dataSet = new DataSet();
+            mySqlDataAdapter.Fill(dataSet, "user");
+
+            DataTable = dataSet.Tables["user"];
+            users = new Scenes.User[DataTable.Rows.Count];
+
+            DataRowCollection = DataTable.Rows;
+            for (int i = 0; i < DataRowCollection.Count; i++)//将数据库中读取到的数据放入数组当中
+            {
+                users[i] = new Scenes.User();
+                DataRow = DataRowCollection[i];
+                users[i].Sid = Convert.ToInt32(DataRow[0]);
+                users[i].Sname = DataRow[1].ToString();
+                users[i].Spassword = DataRow[2].ToString();
+                users[i].Simg = DataRow[3].ToString();
+                users[i].Susergroup = Convert.ToInt32(DataRow[4]);
+            }
+
+            MySqlConnection.Close();
+            return users;
+        }
+
         public Scenes.word[] read(String condition, int amount)
         {
             words = new Scenes.word[amount];
@@ -50,7 +80,6 @@ namespace 英语学习系统
             DataSet dataSet = new DataSet();
             mySqlDataAdapter.Fill(dataSet, "stardict");
 
-            String test = dataSet.Tables["stardict"].Rows[0][1].ToString();
             DataTable = dataSet.Tables["stardict"];
             DataRowCollection = DataTable.Rows;
             for (int i = 0; i < DataRowCollection.Count; i++)//将数据库中读取到的数据放入数组当中

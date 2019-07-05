@@ -31,7 +31,11 @@
                         <Button x:Name="hanburgButton" FontFamily="Segoe MDL2 Assets" Content="" FontSize="24" Click="HanburgButton_Click" />
                         <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="18" Text="Study English"/>
                     </StackPanel>
-                    <ListView Grid.Row="1" x:Name="mainListView" ItemsSource="{Binding menuItems}" ItemTemplate="{StaticResource MenuItemDataTemplate}" IsItemClickEnabled="True" ItemClick="MainListView_ItemClick" />
+                    <ListView Grid.Row="1" x:Name="mainListView" ItemsSource="{Binding menuItems}" ItemTemplate="{StaticResource MenuItemDataTemplate}" IsItemClickEnabled="True" ItemClick="MainListView_ItemClick" >
+                        <TextBlock Text="用户id：" VerticalAlignment="Bottom"/>
+                        <TextBlock Text="{x:Bind local:App.userid}" VerticalAlignment="Bottom"/>
+                    </ListView>
+                    
                 </Grid>
             </SplitView.Pane>
             <Frame x:Name="contentVewFrame" />

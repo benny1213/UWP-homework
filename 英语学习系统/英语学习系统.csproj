@@ -145,13 +145,18 @@
     <Compile Include="Scenes\ReciteF\ShowWord.xaml.cs">
       <DependentUpon>ShowWord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenes\ShowVideo.xaml.cs">
+      <DependentUpon>ShowVideo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenes\Translate.xaml.cs">
       <DependentUpon>Translate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenes\User.cs" />
     <Compile Include="Scenes\UserManage.xaml.cs">
       <DependentUpon>UserManage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenes\word.cs" />
+    <Compile Include="Video.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -203,6 +208,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenes\ShowVideo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenes\Translate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -220,7 +229,9 @@
       <Version>0.54.0</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Img\PrifilePicture\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -47,6 +47,7 @@ namespace 英语学习系统
             {
                 英语学习系统.App.userid = userid;
                 showMessage("登陆成功！");
+                Frame.Navigate(typeof(Scenes.UserManage));
             }
             else
             {
@@ -66,6 +67,7 @@ namespace 英语学习系统
         {
             var msgDialog = new Windows.UI.Popups.MessageDialog(message) { Title = "提示" };
             await msgDialog.ShowAsync();
+            
         }
     }
 }
